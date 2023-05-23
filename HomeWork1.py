@@ -84,9 +84,8 @@ while True:
         n = int(n)
         m = int(m)
         k = int(k)
-        if k < n * m:
-            if k % m == 0 or k % n == 0:
-                print('да')
+        if k < n * m and (k % m == 0 or k % n == 0):
+            print('да')
         else:
             print('нет')
         break
