@@ -19,6 +19,6 @@ while True:
                 count_one += 1
             else: count_null += 1
         if count_one > count_null:
-            print(count_one)
-            count_null = count_one
-            print(random_array)
+            print('Минимальное количество монет, которые нужно перевернуть -' ,count_null)
+        else:
+            print('Минимальное количество монет, которые нужно перевернуть -', count_one)
