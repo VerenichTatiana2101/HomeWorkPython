@@ -7,6 +7,22 @@
 #     3
 #     -> 1
 
+a = input('Введите размер массива: ')
+n = input('Введите искомое число: ')
+if a.isdigit() and n.isdigit() :
+    a = int(a)
+    n = int(n)
+    array = []
+    for i in range(a):
+        array.append(i+1)
+    print(array)
+    print(n)
+    q = 
+    print(q)
+else:
+    print('Данные введены некорректно, повторите попытку')
+
+
 
 
 # Задача 18: Требуется найти в массиве A[1..N] самый близкий по величине элемент к заданному числу X. 
