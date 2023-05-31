@@ -7,23 +7,25 @@
 #     3
 #     -> 1
 
+"""
 a = input('Введите размер массива: ')
 n = input('Введите искомое число: ')
 if a.isdigit() and n.isdigit() :
     a = int(a)
     n = int(n)
+    count = 0
     array = []
     for i in range(a):
         array.append(i+1)
-    print(array)
+    print(*array)
     print(n)
-    q = 
-    print(q)
+    for i in array:
+        if i == n:
+            count += 1
+    print(f" -> {count}")
 else:
     print('Данные введены некорректно, повторите попытку')
-
-
-
+"""
 
 # Задача 18: Требуется найти в массиве A[1..N] самый близкий по величине элемент к заданному числу X. 
 # Пользователь в первой строке вводит натуральное число N – количество элементов в массиве. 
@@ -34,8 +36,26 @@ else:
 #     6
 #     -> 5
 
-
-
+"""
+a = input('Введите размер массива: ')
+n = input('Задайте число, для поиска самого близкого по величине элемента: ')
+if a.isdigit() and n.isdigit() :
+    a = int(a)
+    n = int(n)
+    array = []
+    for i in range(a):
+        array.append(i+1)
+    print(len(array))
+    print(*array)
+    print(n)
+    close_number = array[0]
+    for i in array :
+        if abs(i - n) < abs(close_number - n) :
+            close_number = i
+    print(f" -> {close_number}")
+else:
+    print('Данные введены некорректно, повторите попытку')
+"""
 
 
 # *Задача 20: * В настольной игре Скрабл (Scrabble) каждая буква имеет определенную ценность. 
@@ -61,3 +81,19 @@ else:
 # *Пример:*
 # ноутбук
 #     12
+
+scrabble_grade = {1: 'A, E, I, O, U, L, N, S, T, R, А, В, Е, И, Н, О, Р, С, Т', 
+                   2 : 'D, G, Д, К, Л, М, П, У',
+                    3 : 'B, C, M, P, Б, Г, Ё, Ь, Я',
+                     4: 'F, H, V, W, Y, Й, Ы',
+                      5 : 'K, Ж, З, Х, Ц, Ч',
+                       8 : 'J, X, Ш, Э, Ю',
+                        10 : 'Q, Z, Ф, Щ, Ъ'}
+
+word = input('Введите слово: ').upper()
+price = 0
+for i in word:
+    for key, value in scrabble_grade.items():
+        if i in value:
+            price += key
+print(f"Стоимость введённого слова {price}")
