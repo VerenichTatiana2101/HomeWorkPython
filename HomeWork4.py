@@ -5,7 +5,56 @@
 # m — кол-во элементов второго множества. 
 # Затем пользователь вводит сами элементы множеств.
 
+"""
+size1 = int(input('Введите количество элементов первого набора: '))
+size2 = int(input('Введите количество элементов второго набора: '))
 
+array1 = []
+for i in range(size1) :
+    a = input(f'{i + 1} элемент первого набора: ')
+    array1.append(a)
+result1 = set(array1)
+
+array2 = []
+for i in range(size2) :
+    b = input(f'{i + 1} элемент второго набора: ')
+    array2.append(b)
+result2 = set(array2)
+
+answer = result1.intersection(result2)
+print(*array1)
+print(*array2)
+print(sorted(answer))
+"""
+
+#с проверкой вводимых данных
+# size1 = input('Введите количество элементов первого набора: ')
+# size2 = input('Введите количество элементов второго набора: ')
+
+# if size1.isdigit() and size2.isdigit() : 
+#     size1 = int(size1)
+#     size2 = int(size2)
+#     if size1 > 0 and size2 > 0 :
+#         array1 = []
+#         for i in range(size1) :
+#             a = input(f'{i+1} элемент первого набора: ')
+#             array1.append(a)
+#         result1 = set(array1)
+
+#         array2 = []
+#         for i in range(size2) :
+#             b = input(f'{i+1} элемент второго набора: ')
+#             array2.append(b)
+#         result2 = set(array2)
+
+#         answer = result1.intersection(result2)
+#         print(*array1)
+#         print(*array2)
+#         print(sorted(answer))
+#     else:
+#         ('Данные введены некорректно')
+# else:
+#     print('Данные введены некорректно')
 
 # Задача 24: В фермерском хозяйстве в Карелии выращивают чернику. 
 # Она растёт на круглой грядке, причём кусты высажены только по окружности. 
