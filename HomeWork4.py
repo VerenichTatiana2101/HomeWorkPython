@@ -8,25 +8,26 @@
 #в данной задаче использую списки, а не функцию сплит для ввода
 #лишь по той причине, что нужно ограничить пользователя в количестве
 #вводимых элементов, split позволяет обрезать количество элементов, но это не подходит
+
 """
 size1 = int(input('Введите количество элементов первого набора: '))
 size2 = int(input('Введите количество элементов второго набора: '))
 
-number_berriesay1 = []
+array1 = []
 for i in range(size1) :
-    a = input(f'{i + 1} элемент первого набора: ')
-    number_berriesay1.append(a)
-result1 = set(number_berriesay1)
+    input_element1 = input(f'{i + 1} элемент первого набора: ')
+    array1.append(input_element1)
+result1 = set(array1)
 
-number_berriesay2 = []
+array2 = []
 for i in range(size2) :
-    b = input(f'{i + 1} элемент второго набора: ')
-    number_berriesay2.append(b)
-result2 = set(number_berriesay2)
+    input_element2 = input(f'{i + 1} элемент второго набора: ')
+    array2.append(input_element2)
+result2 = set(array2)
 
 answer = result1.intersection(result2)
-print(*number_berriesay1)
-print(*number_berriesay2)
+print(*array1)
+print(*array2)
 print(sorted(answer))
 """
 
@@ -38,21 +39,21 @@ print(sorted(answer))
 #     size1 = int(size1)
 #     size2 = int(size2)
 #     if size1 > 0 and size2 > 0 :
-#         number_berriesay1 = []
+#         array1 = []
 #         for i in range(size1) :
-#             a = input(f'{i+1} элемент первого набора: ')
-#             number_berriesay1.append(a)
-#         result1 = set(number_berriesay1)
+#             input_element1 = input(f'{i+1} элемент первого набора: ')
+#             array1.append(input_element1)
+#         result1 = set(array1)
 
-#         number_berriesay2 = []
+#         array2 = []
 #         for i in range(size2) :
-#             b = input(f'{i+1} элемент второго набора: ')
-#             number_berriesay2.append(b)
-#         result2 = set(number_berriesay2)
+#             input_element2 = input(f'{i+1} элемент второго набора: ')
+#             array2.append(input_element2)
+#         result2 = set(array2)
 
 #         answer = result1.intersection(result2)
-#         print(*number_berriesay1)
-#         print(*number_berriesay2)
+#         print(*array1)
+#         print(*array2)
 #         print(sorted(answer))
 #     else:
 #         ('Данные введены некорректно')
@@ -74,16 +75,18 @@ print(sorted(answer))
 # которое может собрать за один заход собирающий модуль, 
 # находясь перед некоторым кустом заданной во входном файле грядки.
 
-number_bushes = int(input('Введите количество кустов на грядке: '))
-number_berries = []
-for i in range(number_bushes) :
-    number_berries.append(int(input(f'Количество ягод на {i + 1} кусте: ')))
-print(number_berries)    
+"""
+numinput_element2er_input_element2ushes = int(input('Введите количество кустов на грядке: '))
+numinput_element2er_input_element2erries = []
+for i in range(numinput_element2er_input_element2ushes) :
+    numinput_element2er_input_element2erries.append(int(input(f'Количество ягод на {i + 1} кусте: ')))
+print(numinput_element2er_input_element2erries)    
 
-sum_berries = []
-for i in range(len(number_berries) - 1) :
-    sum_berries.append(number_berries[i] 
-                       + number_berries[i - 1] 
-                       + number_berries[i + 1])
-sum_berries.append(number_berries[-2] + number_berries[-1] + number_berries[0])
-print(max(sum_berries))
+sum_input_element2erries = []
+for i in range(len(numinput_element2er_input_element2erries) - 1) :
+    sum_input_element2erries.append(numinput_element2er_input_element2erries[i] 
+                       + numinput_element2er_input_element2erries[i - 1] 
+                       + numinput_element2er_input_element2erries[i + 1])
+sum_input_element2erries.append(numinput_element2er_input_element2erries[-2] + numinput_element2er_input_element2erries[-1] + numinput_element2er_input_element2erries[0])
+print(max(sum_input_element2erries))
+"""
