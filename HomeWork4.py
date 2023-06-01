@@ -5,25 +5,28 @@
 # m — кол-во элементов второго множества. 
 # Затем пользователь вводит сами элементы множеств.
 
+#в данной задаче использую списки, а не функцию сплит для ввода
+#лишь по той причине, что нужно ограничить пользователя в количестве
+#вводимых элементов, split позволяет обрезать количество элементов, но это не подходит
 """
 size1 = int(input('Введите количество элементов первого набора: '))
 size2 = int(input('Введите количество элементов второго набора: '))
 
-array1 = []
+number_berriesay1 = []
 for i in range(size1) :
     a = input(f'{i + 1} элемент первого набора: ')
-    array1.append(a)
-result1 = set(array1)
+    number_berriesay1.append(a)
+result1 = set(number_berriesay1)
 
-array2 = []
+number_berriesay2 = []
 for i in range(size2) :
     b = input(f'{i + 1} элемент второго набора: ')
-    array2.append(b)
-result2 = set(array2)
+    number_berriesay2.append(b)
+result2 = set(number_berriesay2)
 
 answer = result1.intersection(result2)
-print(*array1)
-print(*array2)
+print(*number_berriesay1)
+print(*number_berriesay2)
 print(sorted(answer))
 """
 
@@ -35,26 +38,27 @@ print(sorted(answer))
 #     size1 = int(size1)
 #     size2 = int(size2)
 #     if size1 > 0 and size2 > 0 :
-#         array1 = []
+#         number_berriesay1 = []
 #         for i in range(size1) :
 #             a = input(f'{i+1} элемент первого набора: ')
-#             array1.append(a)
-#         result1 = set(array1)
+#             number_berriesay1.append(a)
+#         result1 = set(number_berriesay1)
 
-#         array2 = []
+#         number_berriesay2 = []
 #         for i in range(size2) :
 #             b = input(f'{i+1} элемент второго набора: ')
-#             array2.append(b)
-#         result2 = set(array2)
+#             number_berriesay2.append(b)
+#         result2 = set(number_berriesay2)
 
 #         answer = result1.intersection(result2)
-#         print(*array1)
-#         print(*array2)
+#         print(*number_berriesay1)
+#         print(*number_berriesay2)
 #         print(sorted(answer))
 #     else:
 #         ('Данные введены некорректно')
 # else:
 #     print('Данные введены некорректно')
+
 
 # Задача 24: В фермерском хозяйстве в Карелии выращивают чернику. 
 # Она растёт на круглой грядке, причём кусты высажены только по окружности. 
@@ -69,3 +73,17 @@ print(sorted(answer))
 # Напишите программу для нахождения максимального числа ягод, 
 # которое может собрать за один заход собирающий модуль, 
 # находясь перед некоторым кустом заданной во входном файле грядки.
+
+number_bushes = int(input('Введите количество кустов на грядке: '))
+number_berries = []
+for i in range(number_bushes) :
+    number_berries.append(int(input(f'Количество ягод на {i + 1} кусте: ')))
+print(number_berries)    
+
+sum_berries = []
+for i in range(len(number_berries) - 1) :
+    sum_berries.append(number_berries[i] 
+                       + number_berries[i - 1] 
+                       + number_berries[i + 1])
+sum_berries.append(number_berries[-2] + number_berries[-1] + number_berries[0])
+print(max(sum_berries))
