@@ -1,20 +1,15 @@
+from functions import *
+
 # Задача 26: Напишите программу, которая на вход принимает
 # два числа A и B, и возводит число А в целую степень B с
 # помощью рекурсии.
 # A = 3; B = 5 -> 243 (3⁵)
 # A = 2; B = 3 -> 8
 
-"""
 number = int(input('Введите целое число: '))
 degree = int(input('Введите степень числа: '))
-
-def NumberDegree(n, d):
-    if d == 0:
-        return 1 
-    return n * (NumberDegree(n, d - 1))
-
-print(NumberDegree(number, degree))
-"""
+num_degree = NumberDegree(number, degree)
+print(f"Число {number} в {degree} степени = {num_degree}")
 
 # Задача 28: Напишите рекурсивную функцию sum(a, b),
 # возвращающую сумму двух целых неотрицательных чисел. Из
@@ -22,18 +17,12 @@ print(NumberDegree(number, degree))
 # Также нельзя использовать циклы.
 # 2 2
 # 4
-
 """
 num1 = int(input('Введите первое число: '))
 num2 = int(input('Введите второе число: '))
-
-def NumberSum(n1, n2):
-    if n2 < 0:
-        return 0 
-    return n1 + (NumberSum(1, n2 - 1))
-
-print(NumberSum(num1, num2))
-#  до 996+996 считает, если n1 и 1 поменять местами считает до 997+997 
+result = NumberSum(num1, num2)
+print(f"Сумма чисел {num1} и {num2} = {result}")
 """
+
 
 
