@@ -1,3 +1,5 @@
+from functions import *
+
 # Задача 30: Заполните массив элементами арифметической
 # прогрессии. Её первый элемент, разность и количество
 # элементов нужно ввести с клавиатуры. Формула для
@@ -8,22 +10,26 @@
 # Вывод: 7 9 11 13 15
 
 """
+вуариант 1
 a = int(input('Введите первый член прогрессии: '))
 d = int(input('Введите разность прогрессии: '))
 n = int(input('Введите номер последнего члена: '))
 list = []
-
-def arithmetic_progression(n, a, d):
-    if n == 1:
-        return a
-    else:
-        return arithmetic_progression(n-1, a, d) + d
-
 for i in range(n):
-    list.append(arithmetic_progression(i+1, a, d))
+    list.append(arithmetic_progression_rec(i+1, a, d))
 
 print(list)
 """
+
+"""
+вариант 2
+a = int(input('Введите первый член прогрессии: '))
+d = int(input('Введите разность прогрессии: '))
+n = int(input('Введите номер последнего члена: '))
+
+print(arithmetic_progression(a, d, n))
+"""
+
 
 # Задача 32: Определить индексы элементов массива (списка),
 # значения которых принадлежат заданному диапазону (т.е. не
@@ -34,3 +40,11 @@ print(list)
 # 0, -5, -5, 7]
 # Вывод: [1, 9, 13, 14, 19]
 
+# size = int(input('Введите количество элементов первого набора: '))
+# arr = input_array(size)
+# print(arr)
+arr =[-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
+num_min = int(input('Введите минимальное значение: '))
+num_max = int(input('Введите максимальное значение: '))
+
+print(indices_range_min_max(arr, num_min, num_max))

@@ -91,3 +91,27 @@ def reverse_range(num):
     if num > 0: 
         reverse_range(num - 1)
     print(num, end = ' ')
+
+# нахождение элементов арифметической прогрессии с помощью рекурсии без заполнения массива
+def arithmetic_progression_rec(n, a, d):
+    if n == 1:
+        return a
+    else:
+        return arithmetic_progression_rec(n-1, a, d) + d
+
+# заполняет массив элементами арифметической прогрессии
+def arithmetic_progression(a, d, n):
+    array = []
+    for i in range(n):
+        temp = (a + i * d)
+        array.append(temp)
+    return array
+
+# создаёт список индексов элементов исходного списка,
+# значения которых принадлежат заданному диапазону (т.е. !< мин и !> макс)
+def indices_range_min_max(array, num_min, num_max):
+    res = []
+    for i in range(len(array)):
+        if num_min <= array[i] <= num_max:
+            res.append(i)
+    return res
