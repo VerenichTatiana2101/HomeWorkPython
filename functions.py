@@ -126,3 +126,25 @@ def rhyme(text, vowels):
                 count += 1
         vowels_count1.append(count)
     return vowels_count1
+
+#таблица Пифагора
+def pifagor(rows, columns):
+    for i in range(1,rows+1):
+        row = []
+        for j in range(1,columns+1):
+            row.append(str((lambda x, y: x * y)(i,j)))
+        print('\t'.join(row))
+
+#таблица Пифагора
+def pifagor_map(rows, columns):
+    for i in range(1,rows+1):
+        row = list(map(str, map(lambda x: x*i, range(1,columns+1))))
+        print('\t'.join(row))
+
+#таблица сумм
+def sum_nums(num_rows, num_columns):
+    for i in range(num_rows + 1):
+        row = []
+        for j in range(num_columns + 1):
+            row.append(str((lambda x, y: x + y)(i,j)))
+        print('\t'.join(row))
