@@ -14,7 +14,7 @@ from functions import *
 
 # text = input('Введите слово: ').lower()
 text = "пара-ра-рам рам-пам-папам па-ра-па-дам "
-vowels = 'аяуюоеёэиы'
+vowels = {'а', 'я', 'у', 'ю', 'о', 'е', 'ё', 'э', 'и', 'ы'}
 
 # #без использования map и lambda
 # vowels_count_1 = (rhyme(text, vowels))
