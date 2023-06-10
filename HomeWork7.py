@@ -1,3 +1,5 @@
+from functions import *
+
 # Задача 34: Винни-Пух попросил Вас посмотреть, есть ли в его стихах ритм. Поскольку
 # разобраться в его кричалках не настолько просто, насколько легко он их придумывает, Вам
 # стоит написать программу. Винни-Пух считает, что ритм есть, если число слогов (т.е. число
@@ -9,7 +11,26 @@
 # Ввод:                                                Вывод:
 # пара-ра-рам рам-пам-папам па-ра-па-дам               Парам пам-пам
 
+# text = input('Введите слово: ').lower()
+text = "пара-ра-рам рам-пам-папам па-ра-па-дам "
+vowels = 'аяуюоеёэиы'
 
+# #без использования map и lambda
+# vowels_count_1 = (rhyme(text, vowels))
+# print(vowels_count_1)
+
+# if all(i == vowels_count_1[0] for i in vowels_count_1):
+#     print("Пам парам")
+# else:
+#     print("Парам пам-пам")
+
+vowels_count = list(map(lambda phrase: sum(1 for i in phrase if i in vowels), text.split()))
+print(vowels_count)
+
+if all(i == vowels_count[0] for i in vowels_count):
+    print("Пам парам")
+else:
+    print("Парам пам-пам")
 
 
 

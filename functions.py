@@ -115,3 +115,14 @@ def indices_range_min_max(array, num_min, num_max):
         if num_min <= array[i] <= num_max:
             res.append(i)
     return res
+
+#считает количество совпадений в каждом слове
+def rhyme(text, vowels):
+    vowels_count1 = []
+    for phrase in text.split():
+        count = 0
+        for i in phrase:
+            if i in vowels:
+                count += 1
+        vowels_count1.append(count)
+    return vowels_count1
